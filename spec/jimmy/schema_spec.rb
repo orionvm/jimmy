@@ -238,7 +238,7 @@ describe Jimmy::Schema do
             'required'             => %w(withMax withMin withRange basicString),
             'additionalProperties' => false
         }
-        expect(subject.to_h).to eq_json expected
+        expect(subject.to_h).to be_matching expected
       end
     end
 
@@ -291,7 +291,7 @@ describe Jimmy::Schema do
           'required'             => %w(name postcode population country points_of_interest created_at updated_at),
           'additionalProperties' => false
       }
-      expect(subject.to_h).to eq_json expected
+      expect(subject.to_h).to be_matching expected
     end
 
     describe 'validation' do
